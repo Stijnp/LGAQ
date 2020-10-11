@@ -1,0 +1,82 @@
+.card {
+    width: 100%;
+    @include tablet {
+        width: calc(50% - 8px);
+    }
+    @include desktop {
+        width: 360px;
+    }
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+    margin-bottom: 16px;
+    &:not(:nth-child(3n + 3)) {
+        @include desktop {
+            margin-right: 16px;
+        }
+    }
+    &:not(:nth-child(2n + 2)) {
+        @include tablet {
+            margin-right: 16px;
+        }
+    }
+    p {
+        @include tablet {
+            font-size: 14px;
+        }
+        @include desktop {
+            font-size: 14px;
+        }
+    }
+    .card-img-top {
+        height: 150px;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+    .card-img-right {
+        min-width: 135px;
+        height: 100%;
+        border-radius: 0 5px 5px 0;
+    }
+    .card-img-top,
+    .card-img-right {
+        background-size: cover;
+        background-position: center;
+    }
+    .first-card,
+    .fifth-card {
+        background-image: url(../images/image1.jpg);
+    }
+    .second-card,
+    .sixth-card {
+        background-image: url(../images/image3.jpg);
+    }
+    .third-card,
+    .fourth-card {
+        background-image: url(../images/image2.jpg);
+    }
+    .card-body {
+        padding: 25px 15px;
+        .card-title {
+            margin-top: 0;
+        }
+        .card-text {
+            margin-bottom: 0;
+        }
+    }
+}
+.horizontal-card {
+    display: flex;
+    .card-body {
+        background-color: $black;
+        border-radius: 5px 0 0 5px;
+        h3 {
+            @include desktop {
+                font-size: 16px;
+            }
+        }
+        h3,
+        p {
+            color: $white;
+        }
+    }
+}

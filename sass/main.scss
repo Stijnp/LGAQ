@@ -1,0 +1,11 @@
+@import "variables"; // Sass Variables
+@import "normalize"; // Reset/normalize
+@import "mixins"; // Sass Mixins
+@import "base"; // Standard styles
+
+@import "layout/header"; // Header
+@import "layout/footer"; // Footer
+
+@import "components/card"; // Cards
+
+@import "pages/home"; // Home specific styles

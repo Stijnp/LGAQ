@@ -1,0 +1,21 @@
+footer {
+    background-color: $teal;
+    color: $white;
+
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a,
+    p {
+        color: $white;
+        @include tablet {
+            font-size: 15px;
+        }
+        @include desktop {
+            font-size: 15px;
+        }
+    }
+}

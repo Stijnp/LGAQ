@@ -1,0 +1,64 @@
+/* Style the header with a grey background and some padding */
+header {
+    overflow: hidden;
+    background-color: $black;
+    @include tablet {
+        height: 90px;
+    }
+    @include desktop {
+        height: 90px;
+    }
+    a {
+        float: left;
+        color: $white;
+        text-align: center;
+    }
+    .logo {
+        @include mobile {
+            margin: 0 auto;
+        }
+        h1 {
+            font-weight: normal;
+            margin: 20px 0;
+            @include mobile {
+                margin: 10px 0;
+            }
+        }
+    }
+    nav {
+        @include mobile {
+            margin-bottom: 23px;
+        }
+        a {
+            font-weight: bold;
+            font-size: 18px;
+            @include mobile {
+                font-size: 14px;
+            }
+            line-height: 25px;
+            &:not(:last-child) {
+                margin-right: 26px;
+                @include mobile {
+                    margin-right: 27px;
+                }
+            }
+        }
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.hero {
+    background-image: url(../images/banner.jpg);
+    height: 500px;
+    @include mobile {
+        height: 250px;
+    }
+    background-size: cover;
+    background-position-y: center;
+}
