@@ -4,7 +4,7 @@
         width: calc(50% - 8px);
     }
     @include desktop {
-        width: 360px;
+        width: calc(33% - 8px);
     }
     border-radius: 5px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
@@ -69,11 +69,6 @@
     .card-body {
         background-color: $black;
         border-radius: 5px 0 0 5px;
-        h3 {
-            @include desktop {
-                font-size: 16px;
-            }
-        }
         h3,
         p {
             color: $white;
