@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header>
+  <header id="top">
     <div class="container header-wrapper">
 
       <a class="logo">
@@ -134,11 +134,37 @@
   <footer>
     <div class="container footer-wrapper">
       <p>Copyright © LGAQ 2019</p>
-      <p><a href="#">Back To Top <i class="fas fa-arrow-up"></i></a></p>
+      <p><a href="#top" class="to-top">Back To Top <i class="fas fa-arrow-up"></i></a></p>
     </div>
   </footer>
 
-  <script>var btn = document.getElementsByClassName("link-accordion");
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    // Smooth scroll to top
+
+    $(document).ready(function () {
+      $(".to-top").on('click', function (event) {
+
+        // Only run if this.hash has a value
+        if (this.hash !== "") {
+          
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+
+    // Link Accordion
+    var btn = document.getElementsByClassName("link-accordion");
 
     btn[0].addEventListener("click", function () {
       this.classList.toggle("active");
@@ -148,7 +174,8 @@
       } else {
         content.style.display = "block";
       }
-    });</script>
+    });
+  </script>
 </body>
 
 </html>
